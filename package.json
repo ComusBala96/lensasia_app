@@ -1,0 +1,15 @@
+{
+    "name": "@orian/lensasia_app",
+    "description": "All applications are written here.",
+    "version": "1.0.0",
+    "main": "lensasia.js",
+    "keywords": [],
+    "author": {
+        "name": "OrianSoft",
+        "email": "info@oriansoft.com"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "@orian/utils": "1.0.0"
+    }
+}
