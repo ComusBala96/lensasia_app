@@ -1,5 +1,5 @@
 {
-    "name": "@orian/lensasia_app",
+    "name": "@oriansoft/lensasia_app",
     "description": "All applications are written here.",
     "version": "1.0.0",
     "main": "lensasia.js",
@@ -10,6 +10,6 @@
     },
     "license": "MIT",
     "dependencies": {
-        "@orian/utils": "1.0.0"
+        "@oriansoft/utils": "1.0.0"
     }
 }

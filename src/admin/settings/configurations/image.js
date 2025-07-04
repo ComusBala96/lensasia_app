@@ -1,4 +1,4 @@
-import { ajaxRequest, G, multi_select } from '@orian/utils';
+import { ajaxRequest, G, multi_select } from '@oriansoft/utils';
 
 $(document).ready(function () {
     const lang = G.pageLang;

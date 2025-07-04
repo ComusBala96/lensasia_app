@@ -1,4 +1,4 @@
-import { ajaxRequest, createImageUrl, domain_url, downloadExcel, downloadPdf, G, makeAjaxDataTable } from '@orian/utils';
+import { ajaxRequest, createImageUrl, domain_url, downloadExcel, downloadPdf, G, makeAjaxDataTable } from '@oriansoft/utils';
 $(document).ready(function () {
     $('#image').on('change', function (e) {
         let file = e.target.files[0];

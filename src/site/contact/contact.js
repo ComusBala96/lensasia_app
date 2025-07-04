@@ -1,4 +1,4 @@
-import { ajaxRequest, G, isValidUrl, jodit } from '@orian/utils';
+import { ajaxRequest, G, isValidUrl, jodit } from '@oriansoft/utils';
 $(document).ready(function () {
     const lang = G.pageLang;
     const { placeholder } = lang;

@@ -1,4 +1,4 @@
-import { ajaxRequest, isValidUrl, swiper, } from '@orian/utils';
+import { ajaxRequest, isValidUrl, swiper, } from '@oriansoft/utils';
 $(document).ready(function () {
     if ($('#newsContainer').length > 0) {
         $('#newsContainer').on('click', '.pagination span', function () {

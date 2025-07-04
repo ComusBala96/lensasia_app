@@ -1,4 +1,4 @@
-import { ajaxRequest, isValidUrl, MakePdf, swiper } from '@orian/utils';
+import { ajaxRequest, isValidUrl, MakePdf, swiper } from '@oriansoft/utils';
 
 $(document).ready(function () {
     if ($('#videoContainer').length > 0) {

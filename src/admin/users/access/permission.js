@@ -1,4 +1,4 @@
-import { ajaxRequest, domain_url, downloadExcel, downloadPdf, G, makeAjaxDataTable } from '@orian/utils';
+import { ajaxRequest, domain_url, downloadExcel, downloadPdf, G, makeAjaxDataTable } from '@oriansoft/utils';
     
 $(document).ready(function () {
     if ($('#frmCreatePermission').length > 0) {

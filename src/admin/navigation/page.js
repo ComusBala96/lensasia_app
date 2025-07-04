@@ -1,4 +1,4 @@
-import { ajaxRequest, domain_url, downloadExcel, downloadPdf, G, jodit, makeAjaxDataTable, multi_select } from '@orian/utils';
+import { ajaxRequest, domain_url, downloadExcel, downloadPdf, G, jodit, makeAjaxDataTable, multi_select } from '@oriansoft/utils';
 
 $(document).ready(function () {
     const lang = G.pageLang;

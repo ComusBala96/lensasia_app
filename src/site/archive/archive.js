@@ -1,4 +1,4 @@
-import { ajaxRequest, dp, isValidUrl, swiper, } from '@orian/utils';
+import { ajaxRequest, dp, isValidUrl, swiper, } from '@oriansoft/utils';
 $(document).ready(function () {
     swiper({
         elements: ['sideAdsEvenSwiper', 'sideAdsOddSwiper',],

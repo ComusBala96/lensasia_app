@@ -1,4 +1,4 @@
-import {  barCharts, domain_url } from '@orian/utils';
+import {  barCharts, domain_url } from '@oriansoft/utils';
     
 $(document).ready(function () {
     barCharts({

@@ -1,4 +1,4 @@
-import { ajaxRequest, changeColor } from '@orian/utils';
+import { ajaxRequest, changeColor } from '@oriansoft/utils';
 
 $(document).ready(function () {
     changeColor({

@@ -1,4 +1,4 @@
-import { getUrl } from '@orian/utils';
+import { getUrl } from '@oriansoft/utils';
 
 const url = getUrl();
 

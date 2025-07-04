@@ -1,4 +1,4 @@
-import { ajaxRequest } from '@orian/utils';
+import { ajaxRequest } from '@oriansoft/utils';
 
 $(document).ready(function () {
     if ($('#frmUpdateArticlePostLimit').length > 0) {

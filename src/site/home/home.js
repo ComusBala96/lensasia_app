@@ -1,4 +1,4 @@
-import { swiper } from '@orian/utils';
+import { swiper } from '@oriansoft/utils';
 
 $(document).ready(function () {
     swiper({

@@ -1,4 +1,4 @@
-import { ajaxRequest, domain_url, downloadExcel, downloadPdf, G, makeAjaxDataTable, MakePdf } from '@orian/utils';
+import { ajaxRequest, domain_url, downloadExcel, downloadPdf, G, makeAjaxDataTable, MakePdf } from '@oriansoft/utils';
     
 $(document).ready(function () { 
     if ($('#video_print').length > 0) {
