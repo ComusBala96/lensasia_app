@@ -7,25 +7,6 @@ $(document).ready(function () {
                 required: true,
                 maxlength: 253
             },
-            app_address: {
-                required: true,
-                maxlength: 253
-            },
-            footer_about: {
-                required: true,
-            },
-            editor_name: {
-                required: true,
-                maxlength: 253
-            },
-            editor_designation: {
-                required: true,
-                maxlength: 253
-            },
-            copyright: {
-                required: true,
-                maxlength: 253
-            },
         };
         ajaxRequest({
             element: 'frmUpdateGeneralSettings',

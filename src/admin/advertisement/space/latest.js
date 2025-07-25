@@ -4,7 +4,7 @@ $(document).ready(function () {
         let file = e.target.files[0];
         if (typeof file == 'object') {
             let url = createImageUrl(file);
-            $('.latest_image').html(`<img src="${url}" alt="${file.name}" class="h-30 w-full object-cover">`);
+            $('.latest_image').html(`<img src="${url}" alt="${file.name}" class="h-30 w-full object-contain">`);
         } else {
             $('.latest_image').html('');
         }
