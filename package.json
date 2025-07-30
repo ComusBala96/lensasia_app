@@ -1,17 +1,29 @@
 {
     "name": "@oriansoft/lensasia_app",
-    "description": "All applications are written here.",
     "version": "1.0.0",
     "publishConfig": {
         "access": "public"
     },
+    "type": "module",
     "main": "lensasia.js",
-    "keywords": [],
+    "homepage": "https://github.com/ComusBala96/lensasia_app.git",
+    "description": "A npm package of lensasia_app for oriansoft.",
+    "keywords": [
+        "oriansoft",
+        "npm",
+        "@oriansoft",
+        "@oriansoft/utils",
+        "utils"
+    ],
     "author": {
         "name": "OrianSoft",
         "email": "info@oriansoft.com"
     },
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ComusBala96/lensasia_app.git"
+    },
     "dependencies": {
         "@oriansoft/utils": "1.0.2"
     }
