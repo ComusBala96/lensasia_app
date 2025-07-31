@@ -1,4 +1,4 @@
-import { ajaxRequest } from '@oriansoft/utils';
+import { ajaxRequest } from '@orians/utils';
     
 $(document).ready(function () {
     if ($('#frmUpdateGoogleAdsense').length > 0) {

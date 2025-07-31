@@ -1,4 +1,4 @@
-import { ajaxRequest, isValidUrl, MakePdf, swiper } from '@oriansoft/utils';
+import { ajaxRequest, isValidUrl, MakePdf, swiper } from '@orians/utils';
 
 $(document).ready(function () {
     if ($('#galleryContainer').length > 0) {

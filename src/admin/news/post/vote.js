@@ -1,4 +1,4 @@
-import { ajaxRequest, createImageUrl, domain_url, downloadExcel, downloadPdf, dtp, dynamicDom, G, getMimes, makeAjaxDataTable } from '@oriansoft/utils';
+import { ajaxRequest, createImageUrl, domain_url, downloadExcel, downloadPdf, dtp, dynamicDom, G, getMimes, makeAjaxDataTable } from '@orians/utils';
 
 $(document).ready(function () {
     dynamicDom({

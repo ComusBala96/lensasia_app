@@ -1,4 +1,4 @@
-import { ajaxRequest, csrf_token, domain_url, downloadExcel, downloadPdf, G, makeAjaxDataTable } from '@oriansoft/utils';
+import { ajaxRequest, csrf_token, domain_url, downloadExcel, downloadPdf, G, makeAjaxDataTable } from '@orians/utils';
 
 $(document).ready(function () {
     if ($('#cover').length > 0) {

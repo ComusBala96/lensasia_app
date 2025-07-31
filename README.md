@@ -3,19 +3,19 @@
 ## Installation
 
 ```npm
-npm i @oriansoft/lensasia_app
+npm i @orians/lensasia_app
 ```
 
 ## Or
 
 ```yarn
-yarn add @oriansoft/lensasia_app
+yarn add @orians/lensasia_app
 ```
 
 ## Import
 
 ```js
-import '@oriansoft/lensasia_app';
+import '@orians/lensasia_app';
 ```
 
 ## Credits

@@ -1,4 +1,4 @@
-import { ajaxRequest, createImageUrl, domain_url, downloadExcel, downloadPdf, G, jodit, makeAjaxDataTable, summer_note } from '@oriansoft/utils';
+import { ajaxRequest, createImageUrl, domain_url, downloadExcel, downloadPdf, G, jodit, makeAjaxDataTable, summer_note } from '@orians/utils';
 
 $(document).ready(function () {
     if ($('#frmSendDraftMailToUsers').length > 0) {

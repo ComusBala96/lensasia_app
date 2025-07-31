@@ -1,4 +1,4 @@
-import { ajaxRequest, domain_url, isValidUrl, MakePdf, swiper } from '@oriansoft/utils';
+import { ajaxRequest, domain_url, isValidUrl, MakePdf, swiper } from '@orians/utils';
 
 $(document).ready(function () {
     if ($('.newsSwiper').length > 0) {

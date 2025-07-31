@@ -1,4 +1,4 @@
-import { downloadExcel, downloadPdf, G, makeAjaxDataTable } from '@oriansoft/utils';
+import { downloadExcel, downloadPdf, G, makeAjaxDataTable } from '@orians/utils';
 
 $(document).ready(function () {
     

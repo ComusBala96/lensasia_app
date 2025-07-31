@@ -1,4 +1,4 @@
-import { domain_url, downloadExcel, downloadPdf, G, makeAjaxDataTable } from '@oriansoft/utils';
+import { domain_url, downloadExcel, downloadPdf, G, makeAjaxDataTable } from '@orians/utils';
     
 $(document).ready(function () {    
     if ($('#dtSentMail').length > 0) {

@@ -1,4 +1,4 @@
-import { domain_url, downloadExcel, downloadPdf, G, makeAjaxDataTable, MakePdf, swiper } from '@oriansoft/utils';
+import { domain_url, downloadExcel, downloadPdf, G, makeAjaxDataTable, MakePdf, swiper } from '@orians/utils';
 
 $(document).ready(function () {
     if ($('.gallerySwiper').length > 0) {

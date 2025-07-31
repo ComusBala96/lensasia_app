@@ -1,4 +1,4 @@
-import { ajaxRequest, G, jodit } from '@oriansoft/utils';
+import { ajaxRequest, G, jodit } from '@orians/utils';
 
 $(document).ready(function () {
     const lang = G.pageLang;

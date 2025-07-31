@@ -1,4 +1,4 @@
-import { ajaxRequest, csrf_token } from '@oriansoft/utils';
+import { ajaxRequest, csrf_token } from '@orians/utils';
 
 $(document).ready(function () {
     if ($('#cover').length > 0) {

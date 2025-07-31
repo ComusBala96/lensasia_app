@@ -1,4 +1,4 @@
-import { backToTop, clickToHide, loadBounceOnceAnimation, loadLocalStorage, pageAction, scrollToHideShow } from '@oriansoft/utils';
+import { backToTop, clickToHide, loadBounceOnceAnimation, loadLocalStorage, pageAction, scrollToHideShow } from '@orians/utils';
 
 $(document).ready(function () {
     loadLocalStorage();

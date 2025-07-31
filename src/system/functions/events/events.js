@@ -1,4 +1,4 @@
-import { actionModal, domain_url } from '@oriansoft/utils';
+import { actionModal, domain_url } from '@orians/utils';
 $(document).ready(function () {
     if ($('.side_menu_btn').length > 0) {
         $('.side_menu_btn').on('click', function (e) {

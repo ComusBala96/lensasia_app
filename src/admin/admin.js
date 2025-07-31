@@ -1,4 +1,4 @@
-import { getUrl } from '@oriansoft/utils';
+import { getUrl } from '@orians/utils';
 
 const url = getUrl();
 let module;

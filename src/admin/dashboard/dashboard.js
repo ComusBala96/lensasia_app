@@ -1,4 +1,4 @@
-import { barCharts, domain_url, G, makeAjaxDataTable } from '@oriansoft/utils';
+import { barCharts, domain_url, G, makeAjaxDataTable } from '@orians/utils';
 import moment from 'moment';
 
 $(document).ready(function () {

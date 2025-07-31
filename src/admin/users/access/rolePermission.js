@@ -1,4 +1,4 @@
-import { ajaxRequest, domain_url, downloadExcel, downloadPdf, G, makeAjaxDataTable, multi_select } from '@oriansoft/utils';
+import { ajaxRequest, domain_url, downloadExcel, downloadPdf, G, makeAjaxDataTable, multi_select } from '@orians/utils';
 
 $(document).ready(function () {
     if ($('#frmUpdateManageRolePermission').length > 0) {
