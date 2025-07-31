@@ -1,6 +1,6 @@
 {
     "name": "@orians/lensasia_app",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publishConfig": {
         "access": "public"
     },
@@ -25,6 +25,6 @@
         "url": "git+https://github.com/ComusBala96/lensasia_app.git"
     },
     "dependencies": {
-        "@orians/utils": "^1.0.1"
+        "@orians/utils": "^1.0.2"
     }
 }
