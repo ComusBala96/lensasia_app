@@ -1,15 +1,18 @@
-import { barCharts, domain_url, G, makeAjaxDataTable } from '@orians/utils';
+import { app_locale, barCharts, domain_url, G, makeAjaxDataTable } from '@orians/utils';
 import moment from 'moment';
-
+import 'moment/dist/locale/bn';
 $(document).ready(function () {
+    const lang = G.pageLang;
+    const { chart } = lang;
+    moment.updateLocale(app_locale, ['bn', 'en']);
     barCharts({
         element: 'chart',
         type: 'column',
-        title: 'Lens Asia News Posts Analysis upto Date, ' + moment().format('MMMM Do, YYYY'),
+        title: chart.title + ' ' + moment().format('MMMM Do, YYYY'),
         subtitle: `<a href="${domain_url}">www.lensasia.net</a>`,
-        xAxisTitle: 'News Post Analysis',
+        xAxisTitle: chart.x_title,
+        yAxisTitle: chart.y_title,
         xAxisType: 'category',
-        yAxisTitle: 'Maximum Posts',
         series: [
             {
                 name: 'Posts',

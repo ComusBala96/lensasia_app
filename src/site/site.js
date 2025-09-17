@@ -1,5 +1,4 @@
 import { getUrl } from '@orians/utils';
-
 const url = getUrl();
 
 let module;
@@ -50,6 +49,10 @@ case 'site/gallery':
 case 'site/video/show':
 case 'site/video':
     module = import('./video/video');
+    break;
+case 'site/poll/show':
+case 'site/poll':
+    module = import('./poll/poll');
     break;
     //bind
 default:

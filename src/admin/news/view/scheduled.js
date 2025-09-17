@@ -67,7 +67,8 @@ $(document).ready(function () {
                 title: table?.col?.action,                
                 render: function (data, type, row) {
                     return `<a href="${domain_url}admin/news/show/scheduled/view/${data.uuid}"><span class="p-2 rounded-full shadow-md text-white" style="background-color:#2edcdc;"><i class="fa fa-eye"></i></span></a>
-                    <button data-uuid="${data.uuid}" class="scheduled whitespace-nowrap"><span class="px-2 py-1 rounded-md shadow-md text-white bg-body-blue">Publish Now</span></button>`;
+                    <button data-uuid="${data.uuid}" class="scheduled whitespace-nowrap"><span class="px-2 py-1 rounded-md shadow-md text-white bg-body-blue">Publish Now</span></button>
+                    <a href="${domain_url}admin/news/create/article/edit/${row.uuid}"><span class="py-2 px-2.5 rounded-full shadow-md text-white" style="background-color:#2edcdc;"><i class="fa fa-edit"></i></span></a>`;
                 },
             },
         ];

@@ -43,6 +43,9 @@ $(document).ready(function () {
             status: {
                 required: true,
             },
+            expire_at: {
+                required: true,
+            },
         };
         ajaxRequest({
             element: 'frmCreatePoll',
@@ -74,6 +77,9 @@ $(document).ready(function () {
                 required: true,
             },
             status: {
+                required: true,
+            },
+            expire_at: {
                 required: true,
             },
         };
@@ -117,6 +123,10 @@ $(document).ready(function () {
                 title: table?.col?.image,
             },
             {
+                data: 'caption',
+                title: table?.col?.caption,
+            },
+            {
                 data: 'question',
                 title: table?.col?.question,
             },
@@ -131,6 +141,10 @@ $(document).ready(function () {
             {
                 data: 'created_at',
                 title: table?.col?.created_at,
+            },
+            {
+                data: 'expire_at',
+                title: table?.col?.expire_at,
             },
             {
                 data: null,
@@ -151,7 +165,7 @@ $(document).ready(function () {
             select: true,
             url: 'admin/news/post/poll/list',
             columns: col_draft,
-            pdf: [0, 3, 4, 5, 6],
+            pdf: [0, 3, 4, 5, 6, 7],
         });
     }
 });

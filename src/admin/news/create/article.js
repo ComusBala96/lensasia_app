@@ -4,7 +4,12 @@ $(document).ready(function () {
     const lang = G.pageLang;
     const { placeholder } = lang;
     jodit({
-        element: 'summernote_content',
+        element: 'news_description',
+        height: 300,
+        placeholder: placeholder?.description,
+    });
+    jodit({
+        element: 'news_content',
         height: 600,
         placeholder: placeholder?.content,
     });
@@ -61,6 +66,17 @@ $(document).ready(function () {
         } else {
             $('.display_image').removeClass('h-full w-full p-1').addClass('p-2');
             $('.display_image').html(placeholder?.image.select);
+        }
+    });
+    $('#meta_image').on('change', function () {
+        let file = this.files[0];
+        if (typeof file == 'object') {
+            let url = createImageUrl(file);
+            $('.display_meta_image').addClass('h-28 w-50  p-1').removeClass('p-2');
+            $('.display_meta_image').html(`<div class="relative pb-28"><img src="${url}" alt="${file.name}" class="absolute h-full w-full object-cover"></div>`);
+        } else {
+            $('.display_meta_image').removeClass('h-28 w-50 p-1').addClass('p-2');
+            $('.display_meta_image').html(placeholder?.image.select);
         }
     });
     if ($('#frmCreateArticle').length > 0) {
@@ -238,8 +254,8 @@ $(document).ready(function () {
         const { table } = lang;
         let col_draft = [
             {
-                data: 'id',
-                title: table?.col?.id,
+                data: null,
+                title: '',
             },
             {
                 data: 'serial',
@@ -288,7 +304,7 @@ $(document).ready(function () {
             select: true,
             url: 'admin/news/create/article/list',
             columns: col_draft,
-            pdf: [0, 2, 3, 4, 5, 6, 8],
+            pdf: [1, 2, 3, 4, 5, 6, 8],
         });
     }
 });

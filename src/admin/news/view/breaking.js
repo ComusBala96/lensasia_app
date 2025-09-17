@@ -62,7 +62,8 @@ $(document).ready(function () {
                 data: null,
                 title: table?.col?.action,                
                 render: function (data, type, row) {
-                    return `<a href="${domain_url}admin/news/show/breaking/view/${data.uuid}"><span class="p-2 rounded-full shadow-md text-white" style="background-color:#2edcdc;"><i class="fa fa-eye"></i></span></a>`;
+                    return `<a href="${domain_url}admin/news/show/breaking/view/${data.uuid}"><span class="p-2 rounded-full shadow-md text-white" style="background-color:#2edcdc;"><i class="fa fa-eye"></i></span></a>
+                            <a href="${domain_url}admin/news/create/article/edit/${row.uuid}"><span class="py-2 px-2.5 rounded-full shadow-md text-white" style="background-color:#2edcdc;"><i class="fa fa-edit"></i></span></a>`;
                 },
             },
         ];

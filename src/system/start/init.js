@@ -1,6 +1,8 @@
 import { backToTop, clickToHide, loadBounceOnceAnimation, loadLocalStorage, pageAction, scrollToHideShow } from '@orians/utils';
 
 $(document).ready(function () {
+    $('#theGlobalLoader').hide();
+    $('#theDownloadLoader').hide();
     loadLocalStorage();
     pageAction();
     loadBounceOnceAnimation();

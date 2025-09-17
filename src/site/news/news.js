@@ -25,8 +25,10 @@ $(document).ready(function () {
     }
     if ($('#news_print').length > 0) {
         $('#news_print').on('click', function () {
-            let op = JSON.parse($(this).attr('data-pdf-op'));
-            MakePdf({ ...op });
+            $('#theDownloadLoader').show();
+            setTimeout(() => {
+                $('#theDownloadLoader').hide();
+            }, 3000);           
         });
     }
     if ($('#moreNews').length > 0) {
@@ -69,7 +71,56 @@ $(document).ready(function () {
             rules,
             afterSuccess: {
                 type: 'inflate_reset_response_data'
+
             }
+        });
+    }
+    if ($('#newsHeaderAds').length > 0) {
+        $('#newsHeaderAds').find('.popup-close').click(function () {
+            $('#newsHeaderAds').fadeOut(function () {
+                $('#newsHeaderAdsBar').fadeIn();
+            });
+        });
+        $('#openNewsHeaderAdsBar').click(function () {
+            $('#newsHeaderAdsBar').fadeOut(function () {
+                $('#newsHeaderAds').fadeIn();
+            });
+        });
+    }
+    if ($('#newsFooterAds').length > 0) {
+        $('#newsFooterAds').find('.popup-close').click(function () {
+            $('#newsFooterAds').fadeOut(function () {
+                $('#newsFooterAdsBar').fadeIn();
+            });
+        });
+        $('#openNewsFooterAdsBar').click(function () {
+            $('#newsFooterAdsBar').fadeOut(function () {
+                $('#newsFooterAds').fadeIn();
+            });
+        });
+    }
+    if ($('#sideAdsEven').length > 0) {
+        $('#sideAdsEven').find('.popup-close').click(function () {
+            $('#sideAdsEven').fadeOut(function () {
+                $('#sideAdsEvenBar').fadeIn();
+            });
+        });
+        $('#openSideAdsEvenBar').click(function () {
+            $('#sideAdsEvenBar').fadeOut(function () {
+                $('#sideAdsEven').fadeIn();
+            });
+        });
+    }
+    if ($('#sideAdsOdd').length > 0) {
+        $('#sideAdsOdd').find('.popup-close').click(function () {
+            $('#sideAdsOdd').fadeOut(function () {
+                $('#sideAdsOddBar').fadeIn();
+            });
+        });
+        $('#openSideAdsOddBar').click(function () {
+            $('#sideAdsOddBar').fadeOut(function () {
+                $('#sideAdsOdd').fadeIn();
+            });
         });
     }
 });

@@ -64,19 +64,11 @@ $(document).ready(function () {
         let col_draft = [
             {
                 data: 'id',
-                title: table?.col?.id,
+                title: '',
             },
             {
-                data: null,
+                data: 'serial',
                 title: table?.col?.serial,
-                render: function (data, type, row) {
-                    if (data.title == 'Home' || data.title == 'হোম') {
-                        return '<span class="pl-2 py-1 text-black">' + data.serial + '</span>';
-                    } else {
-                        return '<input type="number" value="' + data.serial + `" class="pl-2 py-1 border border-body-blue bg-white text-black focus:outline-none rounded-sm serial z-999">
-                                <input type="hidden" value="` + data.id + '" class="ids">';
-                    }
-                }
             },
             {
                 data: 'title',
@@ -95,15 +87,8 @@ $(document).ready(function () {
                 title: table?.col?.block,
             },
             {
-                data: null,
+                data: 'homepage_serial',
                 title: table?.col?.homepage_serial,
-                render: function (data, type, row) {
-                    if (data.homepage_serial != null) {
-                        return '<input type="number" value="' + data.homepage_serial + '" class="pl-2 py-1 border border-body-blue bg-white text-black focus:outline-none rounded-sm homepage_serial z-999">';
-                    } else {
-                        return 'Not Required';
-                    }
-                }
             },
             {
                 data: 'visibility',
@@ -118,18 +103,15 @@ $(document).ready(function () {
                 title: table?.col?.created_at,
             },
             {
-                data: null,
+                data: 'action',
                 title: table?.col?.action,
-                render: function (data, type, row) {
-                    return `<a href="${domain_url}admin/navigation/menu/edit/${data.uuid}"><span class="p-2 rounded-full shadow-md text-white" style="background-color:#2edcdc;"><i class="fa fa-edit"></i></span></a>`;
-                },
             },
         ];
         makeAjaxDataTable('dtMenu', {
             select: true,
             url: 'admin/navigation/menu/list',
             columns: col_draft,
-            pdf: [0, 2, 5, 7, 8, 9],
+            pdf: [2, 5, 7, 8, 9],
         });
     }
 });

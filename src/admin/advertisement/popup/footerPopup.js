@@ -1,53 +1,73 @@
 import { ajaxRequest, createImageUrl, domain_url, downloadExcel, downloadPdf, G, makeAjaxDataTable } from '@orians/utils';
-    
 $(document).ready(function () {
     $('#image').on('change', function (e) {
         let file = e.target.files[0];
         if (typeof file == 'object') {
             let url = createImageUrl(file);
-            $('.latest_image').html(`<img src="${url}" alt="${file.name}" class="h-30 w-full object-contain">`);
+            $('.popup_image').html(`<img src="${url}" alt="${file.name}" class="h-30 w-full object-contain">`);
         } else {
-            $('.latest_image').html('');
+            $('.popup_image').html('');
         }
     });
-    if ($('#frmCreateNewsAd').length > 0) {
+    if ($('#frmCreateFooterPopupAd').length > 0) {
         let rules = {
             name: {
                 required: true,
                 maxlength: 253,
             },
+            image: {
+                required: false,
+            },
+            visibility: {
+                required: true,
+            },
+            sponsored: {
+                required: true,
+            },
         };
         ajaxRequest({
-            element: 'frmCreateNewsAd',
+            element: 'frmCreateFooterPopupAd',
             validation: true,
-            script: 'admin/advertisement/space/news/create',
+            script: 'admin/advertisement/popup/footer/create',
             rules,
             afterSuccess: {
                 type: 'inflate_reset_response_data',
+                afterLoad: () => {
+                    $('.popup_image').html('');
+                }
             },
         });
     }
-    if ($('#frmUpdateNewsAd').length > 0) {
+    if ($('#frmUpdateFooterPopupAd').length > 0) {
         let rules = {
             name: {
                 required: true,
-                maxlength: 253
+                maxlength: 253,
+            },
+            image: {
+                required: false,
+            },
+            visibility: {
+                required: true,
+            },
+            sponsored: {
+                required: true,
             },
         };
         ajaxRequest({
-            element: 'frmUpdateNewsAd',
+            element: 'frmUpdateFooterPopupAd',
             validation: true,
-            script: 'admin/advertisement/space/news/update',
+            script: 'admin/advertisement/popup/footer/update',
             rules,
             afterSuccess: {
                 type: 'inflate_response_data'
             }
         });
     }
-    
-    if ($('#dtNewsAd').length > 0) {
+
+    if ($('#dtFooterPopupAd').length > 0) {
         const lang = G.pageLang;
-        const {table} = lang;
+        const { table } = lang;
         let col_draft = [
             {
                 data: 'id',
@@ -58,7 +78,7 @@ $(document).ready(function () {
                 title: table?.col?.serial,
                 render: function (data, type, row) {
                     return `<input type="number" value="${data.serial}" class="pl-2 py-1 border border-body-blue bg-white text-black focus:outline-none rounded-sm serial z-999">
-                            <input type="hidden" value="${data.id}" class="ids">`;
+                                <input type="hidden" value="${data.id}" class="ids">`;
                 }
             },
             {
@@ -85,29 +105,29 @@ $(document).ready(function () {
                 data: null,
                 title: table?.col?.action,                
                 render: function (data, type, row) {
-                    return `<a href="${domain_url}admin/advertisement/space/news/edit/${data.uuid}"><span class="p-2 rounded-full shadow-md text-white" style="background-color:#2edcdc;"><i class="fa fa-edit"></i></span></a>`;
+                    return `<a href="${domain_url}admin/advertisement/popup/footer/edit/${data.uuid}"><span class="p-2 rounded-full shadow-md text-white" style="background-color:#2edcdc;"><i class="fa fa-edit"></i></span></a>`;
                 },
             },
         ];
-        makeAjaxDataTable('dtNewsAd', {
+        makeAjaxDataTable('dtFooterPopupAd', {
             select: true,
-            url: 'admin/advertisement/space/news/list',
+            url: 'admin/advertisement/popup/footer/list',
             columns: col_draft,
             pdf: [0, 3, 4, 5, 6],
         });
     }
 });
-    
-window.dtNewsAd = (table, api, op) => {
+
+window.dtFooterPopupAd = (table, api, op) => {
     G.deleteAll({
-        element: 'deleteAllNewsAd',
-        script: 'admin/advertisement/space/news/delete',
+        element: 'deleteAllFooterPopupAd',
+        script: 'admin/advertisement/popup/footer/delete',
         confirm: true,
         api,
     });
     G.updateAll({
-        element: 'updateAllNewsAd',
-        script: 'admin/advertisement/space/news/updateRow',
+        element: 'updateAllFooterPopupAd',
+        script: 'admin/advertisement/popup/footer/updateRow',
         confirm: true,
         dataCols: {
             key: 'ids',
@@ -131,6 +151,6 @@ window.dtNewsAd = (table, api, op) => {
             type: 'inflate_response_data'
         }
     });
-    downloadPdf({ ...op, btn: 'downloadNewsAdPdf', dataTable: 'yes' });
-    downloadExcel({ ...op, btn: 'downloadNewsAdExcel', dataTable: 'yes' });
+    downloadPdf({ ...op, btn: 'downloadFooterPopupAdPdf', dataTable: 'yes' });
+    downloadExcel({ ...op, btn: 'downloadFooterPopupAdExcel', dataTable: 'yes' });
 };

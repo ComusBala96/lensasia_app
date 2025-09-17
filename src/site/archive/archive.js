@@ -80,4 +80,28 @@ $(document).ready(function () {
             }
         });
     }
+    if ($('#sideAdsEven').length > 0) {
+        $('#sideAdsEven').find('.popup-close').click(function () {
+            $('#sideAdsEven').fadeOut(function () {
+                $('#sideAdsEvenBar').fadeIn();
+            });
+        });
+        $('#openSideAdsEvenBar').click(function () {
+            $('#sideAdsEvenBar').fadeOut(function () {
+                $('#sideAdsEven').fadeIn();
+            });
+        });
+    }
+    if ($('#sideAdsOdd').length > 0) {
+        $('#sideAdsOdd').find('.popup-close').click(function () {
+            $('#sideAdsOdd').fadeOut(function () {
+                $('#sideAdsOddBar').fadeIn();
+            });
+        });
+        $('#openSideAdsOddBar').click(function () {
+            $('#sideAdsOddBar').fadeOut(function () {
+                $('#sideAdsOdd').fadeIn();
+            });
+        });
+    }
 });

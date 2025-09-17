@@ -1,5 +1,4 @@
 import { getUrl } from '@orians/utils';
-
 const url = getUrl();
 let module;
 switch (url) {
@@ -189,6 +188,12 @@ case 'admin/advertisement/position/side':
 case 'admin/advertisement/position/footer':
     module = import('./advertisement/position/footer');
     break;
+case 'admin/advertisement/popup/middle':
+    module = import('./advertisement/popup/middlePopup');
+    break;
+case 'admin/advertisement/popup/footer':
+    module = import('./advertisement/popup/footerPopup');
+    break;
 case 'admin/advertisement/position/middle':
     module = import('./advertisement/position/middle');
     break;
@@ -230,6 +235,9 @@ case 'admin/users/manage/administrator':
     break;
 case 'admin/users/manage/users':
     module = import('./users/manage/users');
+    break;
+case 'admin/users/manage/employees':
+    module = import('./users/manage/employees');
     break;
 case 'admin/users/manage/subscribers':
     module = import('./users/manage/subscribers');

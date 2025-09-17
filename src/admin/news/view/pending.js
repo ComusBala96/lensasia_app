@@ -66,7 +66,8 @@ $(document).ready(function () {
                         return `<a href="${domain_url}admin/news/show/pending/view/${data.uuid}"><span class="p-2 rounded-full shadow-md text-white" style="background-color:#2edcdc;"><i class="fa fa-eye"></i></span></a>`;
                     } else {
                         return `<a href="${domain_url}admin/news/show/pending/view/${data.uuid}"><span class="p-2 rounded-full shadow-md text-white" style="background-color:#2edcdc;"><i class="fa fa-eye"></i></span></a>
-                                <button data-uuid="${data.uuid}" class="pending"><span class="px-2 py-1 rounded-md shadow-md text-white bg-body-blue">Approve</span></button>`;
+                                <button data-uuid="${data.uuid}" class="pending"><span class="px-2 py-1 rounded-md shadow-md text-white bg-body-blue">Approve</span></button>
+                                <a href="${domain_url}admin/news/create/article/edit/${row.uuid}"><span class="py-2 px-2.5 rounded-full shadow-md text-white" style="background-color:#2edcdc;"><i class="fa fa-edit"></i></span></a>`;
                     }
                 },
             },

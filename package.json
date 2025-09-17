@@ -25,6 +25,6 @@
         "url": "git+https://github.com/ComusBala96/lensasia_app.git"
     },
     "dependencies": {
-        "@orians/utils": "^1.0.2"
+        "@orians/utils": "^1.0.4"
     }
 }
